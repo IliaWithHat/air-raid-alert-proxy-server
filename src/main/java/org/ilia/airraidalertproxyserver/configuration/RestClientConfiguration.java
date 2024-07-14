@@ -9,9 +9,10 @@ import org.springframework.web.client.RestClient;
 public class RestClientConfiguration {
 
     @Bean
-    public RestClient restClient(@Value("${api.token}") String apiToken) {
+    public RestClient restClient(@Value("${api.url}") String url,
+                                 @Value("${api.token}") String apiToken) {
         return RestClient.builder()
-                .baseUrl("https://api.alerts.in.ua")
+                .baseUrl(url)
                 .defaultHeader("Authorization", "Bearer " + apiToken)
                 .build();
     }
