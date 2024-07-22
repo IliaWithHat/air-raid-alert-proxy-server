@@ -23,8 +23,8 @@ class AlertServiceImpl(private val restClient: RestClient) : AlertService {
     fun updateAlerts() {
         val alertsString = fetchAlerts()
         val updatedAlerts: MutableList<Alert> = mutableListOf()
-        repeat(alertsString.length) { i ->
-            updatedAlerts.add(Alert(i + 1, RegionData.regions[i], alertsString[i] == 'A'))
+        repeat(alertsString.length) {
+            updatedAlerts.add(Alert(it + 1, RegionData.regions[it], alertsString[it] == 'A'))
         }
         alerts = updatedAlerts
     }
