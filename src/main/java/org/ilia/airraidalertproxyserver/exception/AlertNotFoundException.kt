@@ -1,8 +1,3 @@
-package org.ilia.airraidalertproxyserver.exception;
+package org.ilia.airraidalertproxyserver.exception
 
-public class AlertNotFoundException extends RuntimeException {
-
-    public AlertNotFoundException(String message) {
-        super(message);
-    }
-}
+class AlertNotFoundException(message: String) : RuntimeException(message)

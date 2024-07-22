@@ -1,13 +1,13 @@
-package org.ilia.airraidalertproxyserver;
+package org.ilia.airraidalertproxyserver
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.Test
+import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
 class AirRaidAlertProxyServerApplicationTests {
 
     @Test
-    void contextLoads() {
+    fun contextLoads() {
     }
 
 }
